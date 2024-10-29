@@ -30,51 +30,58 @@
             result = Addition(num1, num2);
             Console.WriteLine($"The result of {num1} + {num2} equals {result}");
             break;
+
         case 2:
             result = Subtraction(num1, num2);
             Console.WriteLine($"The result of {num1} - {num2} equals {result}");
             break;
+
         case 3:
             result = Multiplication(num1, num2);
             Console.WriteLine($"The result of {num1} * {num2} equals {result}");
             break;
+
         case 4:
-            result = Division(num1, num2);
-            Console.WriteLine($"The result of {num1} / {num2} equals {result}");
+            Division(num1, num2);
             break;
+
         case 5:
             break;
+
+        default:
+            Console.WriteLine("Invalid operation.");
+            break;
     }
 
-    static double Addition(double a, double b)
+    static double Addition(double num1, double num2)
     {
-        return a + b;
+        return num1 + num2;
     }
 
-    static double Subtraction(double a, double b)
+    static double Subtraction(double num1, double num2)
     {
-        return a - b;
+        return num1 - num2;
     }
 
-    static double Multiplication(double a, double b)
+    static double Multiplication(double num1, double num2)
     {
-        return a * b;
+        return num1 * num2;
     }
 
-    static double Division(double a, double b)
+    static void Division(double num1, double num2)
     {
-        if (b == 0)
+        if (num2 == 0)
         {
-            throw new DivideByZeroException("Number can't be divided by zero");
+            Console.WriteLine("Error: Division by zero is not allowed.");
         }
         else
         {
-            return a / b;
-        }
+            double result = num1 / num2;
+            Console.WriteLine($"The result of {num1} / {num2} equals {result}");
+        }        
     }
 
     Console.WriteLine("");
-
 } while (true);
 
 Console.WriteLine("Goodbye!");
