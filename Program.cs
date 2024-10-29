@@ -16,27 +16,31 @@
         break;
     }
 
-    double result;
-
     Console.Write("Enter first number: ");
     double num1 = Convert.ToDouble(Console.ReadLine());
 
     Console.Write("Enter second number: ");
     double num2 = Convert.ToDouble(Console.ReadLine());
 
+    double result;
+
     switch (choice)
     {
         case 1:
             result = Addition(num1, num2);
+            Console.WriteLine($"The result of {num1} + {num2} equals {result}");
             break;
         case 2:
             result = Subtraction(num1, num2);
+            Console.WriteLine($"The result of {num1} - {num2} equals {result}");
             break;
         case 3:
             result = Multiplication(num1, num2);
+            Console.WriteLine($"The result of {num1} * {num2} equals {result}");
             break;
         case 4:
             result = Division(num1, num2);
+            Console.WriteLine($"The result of {num1} / {num2} equals {result}");
             break;
         case 5:
             break;
