@@ -47,10 +47,6 @@
 
         case 5:
             break;
-
-        default:
-            Console.WriteLine("Invalid operation.");
-            break;
     }
 
     static double Addition(double num1, double num2)
