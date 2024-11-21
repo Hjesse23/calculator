@@ -1,7 +1,7 @@
 ﻿Console.WriteLine(" --- Welcome to the Calculator Program --- ");
 do
 {
-    
+
     Console.WriteLine("Choose an operation:");
 
     Console.WriteLine("1. Add");
@@ -30,24 +30,20 @@ do
         case 1:
             result = Addition(num1, num2);
             Console.WriteLine($"The result of {num1} + {num2} equals {result}");
-            PressEnter();
             break;
 
         case 2:
             result = Subtraction(num1, num2);
             Console.WriteLine($"The result of {num1} - {num2} equals {result}");
-            PressEnter();
             break;
 
         case 3:
             result = Multiplication(num1, num2);
             Console.WriteLine($"The result of {num1} * {num2} equals {result}");
-            PressEnter();
             break;
 
         case 4:
             Division(num1, num2);
-            PressEnter();
             break;
 
         case 5:
@@ -79,7 +75,7 @@ do
         {
             double result = num1 / num2;
             Console.WriteLine($"The result of {num1} / {num2} equals {result}");
-        }        
+        }
     }
 
     void PressEnter()
@@ -88,7 +84,7 @@ do
         Console.ReadLine();
     }
 
-    Console.WriteLine("");
+    PressEnter();
 } while (true);
 
 Console.WriteLine("Goodbye!");
